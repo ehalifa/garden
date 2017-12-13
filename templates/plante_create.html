@@ -1,0 +1,9 @@
+
+
+<h1>Ajouter une plante</h1>
+
+<form action="" method="POST">
+{% csrf_token %}
+{{form.as_ul}}
+<input type="submit" value="Créer"/>
+</form>

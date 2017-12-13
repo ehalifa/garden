@@ -1,0 +1,30 @@
+
+
+{#{% for plante in garden %}#}
+{#    <div>#}
+{#    <p>{{ plante.nom }} --#}
+{#    {{ plante.id_jardin }}</p>#}
+{#    </div>#}
+{#{% endfor %}#}
+
+<h1>Liste des plantes</h1>
+
+
+{% for plante in garden %}
+
+    {% ifchanged %}
+        <h3>{{ plante.id_jardin }}
+            <a href="{% url 'add_jardin' %}"><button>Add</button></a>
+            <a href="{% url 'update_jardin' plante.id_jardin.id  %}"><button>Edit</button></a>
+            <a href="../jardin/delete/{{ plante.id_jardin }}"><button>Delete</button></a>
+        </h3>
+    {% endifchanged %}
+
+    <p>{{ plante.nom }} <a href="./delete/{{ plante.id }}"><button>Supprimer</button></a>
+    <a href="./update/{{ plante.id }}"><button>Modifier</button></a> </p>
+
+{% endfor %}
+
+<a href="./add">
+    <button>Ajouter une plante</button>
+</a>
