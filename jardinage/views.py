@@ -44,8 +44,7 @@ class PlanteList(ListView):
     context_object_name = "garden"
     liste = plante.objects.distinct('id_jardin')
 
-    #test pour sourcetree
-    vxgfxwfdwfvxfdwfdwrdd
+
 
 
 class PlanteCreate(CreateView):
