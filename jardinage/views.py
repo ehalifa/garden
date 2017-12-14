@@ -45,6 +45,8 @@ class PlanteList(ListView):
     liste = plante.objects.distinct('id_jardin')
 
 
+
+
 class PlanteCreate(CreateView):
     model = plante
     fields = ['nom', 'date_naissance', 'date_deces', 'id_variete', 'id_jardin']
